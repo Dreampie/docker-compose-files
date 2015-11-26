@@ -31,7 +31,7 @@ elasticsearch:
   command: sh -c "sleep 10; curl -XPUT es:9200/_template/logstash_netflow -d@'/tmp/logstash_netflow.json';elasticsearch"
 
 kibana:
-  image: kibana:4.1
+  image: kibana:4.3
   ports:
     - "5601:5601"
   links:
