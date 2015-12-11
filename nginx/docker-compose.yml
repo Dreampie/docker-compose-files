@@ -1,0 +1,10 @@
+nginx:
+  image: nginx:1.9.8
+  ports:
+    - "80:80"
+    - "443:443"
+  volumes:
+    - /etc/nginx:/etc/nginx
+    - /var/log/nginx:/var/log/nginx
+    - /var/cache/nginx:/var/cache/nginx
+    - /usr/share/nginx:/usr/share/nginx
