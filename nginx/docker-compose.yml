@@ -8,5 +8,3 @@ nginx:
   volumes:
     - /etc/nginx
     - /var/log/nginx
-    - /var/cache/nginx
-    - /usr/share/nginx
