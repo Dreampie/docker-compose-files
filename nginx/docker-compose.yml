@@ -1,6 +1,7 @@
 nginx:
   image: nginx:1.9.8
   hostname: nginx
+  restart: always
   ports:
     - "80:80"
     - "443:443"

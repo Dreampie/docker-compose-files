@@ -1,6 +1,7 @@
 rabbitmq:
   image: rabbitmq:3.5.6
   hostname: rabbitmq
+  restart: always
   environment:
     - ERLANG_COOKIE = secret cookie here
   ports:

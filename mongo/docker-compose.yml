@@ -1,6 +1,7 @@
 mongo:
   image: mongo:3.2.0
   hostname: mongo
+  restart: always
   ports:
     - "27017:27017"
   command: "--smallfiles --rest"
