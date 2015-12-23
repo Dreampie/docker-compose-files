@@ -1,5 +1,5 @@
 registry:
-  image: registry:2
+  image: registry:2.2.1
   hostname: registry
   restart: always
   ports:

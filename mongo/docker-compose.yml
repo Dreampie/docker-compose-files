@@ -4,6 +4,7 @@ mongo:
   restart: always
   ports:
     - "27017:27017"
+    - "28017:28017"
   command: "--smallfiles --rest"
   volumes:
-    - /opt/data/mongo/db:/data/db
+    - /data/db
