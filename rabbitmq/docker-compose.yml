@@ -1,12 +1,24 @@
 rabbitmq:
-  image: rabbitmq:3.5.6
+  image: rabbitmq:3.5.7
   hostname: rabbitmq
   restart: always
   environment:
     - ERLANG_COOKIE = secret cookie here
   ports:
     - "5672:5672"
-    - "15672:15672"
   volumes:
     - /var/lib/rabbitmq
     - /etc/rabbitmq
+  links:
+    - rabbitmq-management
+
+rabbitmq-management:
+  image: rabbitmq:3.5.7-management
+  hostname: rabbitmq-management
+  restart: always
+  ports:
+    - "15672:15672"
+  environment:
+    - RABBITMQ_DEFAULT_USER=guest
+    - RABBITMQ_DEFAULT_PASS=guest
+    - RABBITMQ_DEFAULT_VHOST=/

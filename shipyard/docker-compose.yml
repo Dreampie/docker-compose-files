@@ -2,10 +2,17 @@ shipyard:
   image: shipyard:3.0.2
   hostname: shipyard
   restart: always
-  link:
-    - rethinkdb:rethinkdb
   ports:
-    - "8080"
+    - "8080:8080"
   command: "server -d tcp://127.0.0.1:2375"
   volumes:
     - /container/path
+  links:
+    - rethinkdb
+
+rethinkdb:
+  image: rethinkdb:2.2.2
+  hostname: rethinkdb
+  restart: always
+  volumes:
+    - /data

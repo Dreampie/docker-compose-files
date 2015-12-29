@@ -8,3 +8,4 @@ nginx:
   volumes:
     - /etc/nginx
     - /var/log/nginx
+    - /www
