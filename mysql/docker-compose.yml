@@ -7,4 +7,4 @@ mysql:
   environment:
     - MYSQL_ROOT_PASSWORD=root
   volumes:
-    - /var/lib/mysql
+    - ./data:/var/lib/mysql

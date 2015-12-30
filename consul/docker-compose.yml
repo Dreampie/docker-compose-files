@@ -11,5 +11,5 @@ consul:
     - "8500:8500"
   command: "-server -bootstrap"
   volumes:
-    - /data
-    - /tmp
+    - ./data:/data
+    - ./tmp:/tmp

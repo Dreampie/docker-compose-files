@@ -6,4 +6,4 @@ elasticsearch:
     - "9200:9200"
     - "9300:9300"
   volumes:
-    - /usr/share/elasticsearch
+    - ./data:/usr/share/elasticsearch

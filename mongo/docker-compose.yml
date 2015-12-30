@@ -7,4 +7,4 @@ mongo:
     - "28017:28017"
   command: "--smallfiles --rest"
   volumes:
-    - /data/db
+    - ./data:/data/db

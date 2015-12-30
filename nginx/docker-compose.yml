@@ -1,11 +1,12 @@
 nginx:
-  image: nginx:1.9.8
+  image: nginx:1.9.9
   hostname: nginx
   restart: always
   ports:
     - "80:80"
     - "443:443"
   volumes:
-    - /etc/nginx
-    - /var/log/nginx
-    - /www
+    - ./etc:/etc/nginx
+    - ./html:/usr/share/nginx/html
+    - ./log:/var/log/nginx
+    - ./www:/www
